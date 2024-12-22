@@ -53,7 +53,9 @@ Press CTRL+C to quit
 ```bash
 10.0.2.19 - - [22/Dec/2024 19:16:40] "GET / HTTP/1.1" 200 -
 ```
-
+Для управления названием используемой таблицы создаем ENV переменную DB_TABLE и, если требуется, устанавливаем ее значение по умолчанию в Dockerfile.python, 
+добавив строку ENV DB_TABLE="requests", или иное значение:
+Вносим изменение в main.py:
 ```bash
 from flask import Flask
 from flask import request
@@ -100,6 +102,14 @@ def index():
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
 ```
+
+
+
+
+```bash
+docker run --rm --network=host -e DB_PASSWORD="very_strong" -e DB_TABLE="requests" tvm2360/my_app:latest
+```
+
 
 
 
