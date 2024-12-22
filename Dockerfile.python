@@ -1,0 +1,21 @@
+FROM python:3.9-slim
+
+WORKDIR /app
+
+ENV DB_HOST="127.0.0.1"
+
+ENV DB_USER="app"
+
+ENV DB_NAME="example"
+
+RUN addgroup --system python && adduser --system --disabled-password --ingroup python python && chown python:python /app
+
+RUN export DEBIAN_FRONTEND=noninteractive && apt-get update
+
+COPY --chown=python:python . .
+
+RUN python3 -m venv venv && . venv/bin/activate
+
+RUN pip3 install -r requirements.txt
+
+CMD ["python", "main.py"]
