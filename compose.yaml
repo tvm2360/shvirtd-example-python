@@ -1,0 +1,54 @@
+version: '3.8'
+include:
+  - proxy.yaml
+x-env_file: &env_file
+  env_file:
+    - .env
+services:
+  web:
+    image: cr.yandex/crpop9a9o6dh4hvgiv23/my_app:latest
+    restart: on-failure
+    container_name: web
+    hostname: web
+    <<: [*env_file]
+    depends_on:
+       db:
+          condition: service_healthy
+    healthcheck:
+      test: curl --fail http://localhost:5000 || exit 1
+      interval: 60s
+      retries: 5
+      start_period: 20s
+      timeout: 10s
+    environment:
+       DB_HOST: "172.20.0.10"
+       DB_USER: ${MYSQL_USER}
+       DB_NAME: ${MYSQL_DATABASE}
+       DB_PASSWORD: ${MYSQL_PASSWORD}
+    networks:
+       backend:
+          ipv4_address: 172.20.0.5
+    ports:
+      - "127.0.0.1:5000:5000"
+  db:
+    image: mysql:8
+    restart: on-failure
+    container_name: db
+    hostname: db
+    <<: [*env_file]
+    healthcheck:
+        test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+        timeout: 20s
+        retries: 10
+    environment:
+       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+       MYSQL_DATABASE: ${MYSQL_DATABASE}
+       MYSQL_USER: ${MYSQL_USER}
+       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+       MYSQL_ROOT_HOST: "%"
+    networks:
+      backend:
+        ipv4_address: 172.20.0.10
+    ports:
+      - "127.0.0.1:3306:3306"
+
