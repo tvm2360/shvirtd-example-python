@@ -2,7 +2,7 @@
 -
 [Dockerfile.python](Dockerfile.python)
 
-ENV-переменные DB_HOST, DB_USER, DB_NAME заданы внутри по умолчанию, DB_PASSWORD предусматривает внешнее определение.
+ENV-переменные DB_HOST, DB_USER, DB_NAME заданы внутри со значениями по-умолчанию. DB_PASSWORD предусматривает внешнее определение.
 
 Проверка:
 ```bash
@@ -18,10 +18,14 @@ docker pull tvm2360/my_app:latest
 ```
 
 Поскольку python-приложение предусматривает взаимодействие с СУБД MySQL, для проверки работоспособности будем использовать
-образ контейнера MariaDB. 
-
-
+образ контейнера MariaDB. Загружаем образ:
+```bash
+docker pull mariadb:10.6.4-focal
+```
+Запускаем контейнер с установкой значений ENV-переменных MYSQL_DATABASE, MYSQL_USER, MYSQL_PASSWORD из задания, MYSQL_ROOT_PASSWORD - по собственному усмотрению:
+```bash
 docker run -d --rm --network=host -e MYSQL_ROOT_PASSWORD="p@ssw0rd"  -e MYSQL_DATABASE="example" -e MYSQL_USER="app" -e MYSQL_PASSWORD="very_strong" -e MYSQL_ROOT_HOST="%" mariadb:10.6.4-focal
+```
 
 
 
