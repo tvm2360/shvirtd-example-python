@@ -3,7 +3,7 @@
 [Dockerfile.python](Dockerfile.python) [.dockerignore](.dockerignore)
 
 ENV-переменные DB_HOST, DB_USER, DB_NAME заданы внутри со значениями по умолчанию из задания. DB_PASSWORD предусматривает внешнее определение.
-Если не требуется виртуальное окружения, строка 
+Если проекту не требуется виртуальное окружение, строка: 
 ```bash
 RUN python3 -m venv venv && . venv/bin/activate 
 ```
