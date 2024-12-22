@@ -1,5 +1,5 @@
-#Задание 1
--
+# Задание 1
+
 [Dockerfile.python](Dockerfile.python) [.dockerignore](.dockerignore)
 
 ENV-переменные DB_HOST, DB_USER, DB_NAME заданы внутри со значениями по умолчанию из задания. DB_PASSWORD предусматривает внешнее определение.
@@ -100,8 +100,8 @@ def index():
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
 ```
-#Задание 2
--
+# Задание 2
+
 
 
 
