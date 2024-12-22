@@ -109,13 +109,13 @@ if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
 ```
 # Задание 2
-[Отчет о результатах сканирования](vulnerabilities.csv)
+Отчет о результатах сканирования
 # Задание 3
 [compose.yaml](compose.yaml)
 ```cmd
 curl -L http://127.0.0.1:8090
 TIME: 2024-12-22 21:44:12, IP: 127.0.0.1
 ```
-[SQL results](2024-12-23_01-00-38.png)
+SQL results
 
 
