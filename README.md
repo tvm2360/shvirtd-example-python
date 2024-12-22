@@ -118,6 +118,6 @@ TIME: 2024-12-22 21:44:12, IP: 127.0.0.1
 ```
 SQL results
 # Задание 4
-SQL results, get_app.sh, git fork url
+SQL results, [get_app.sh](get_app.sh), git fork url
 
 
