@@ -1,10 +1,8 @@
 Задание 1
 -
-[Dockerfile.python](Dockerfile.python)
+[Dockerfile.python](Dockerfile.python) [.dockerignore](.dockerignore)
 
-[.dockerignore](.dockerignore)
-
-ENV-переменные DB_HOST, DB_USER, DB_NAME заданы внутри со значениями по-умолчанию. DB_PASSWORD предусматривает внешнее определение.
+ENV-переменные DB_HOST, DB_USER, DB_NAME заданы внутри со значениями по умолчанию из задания. DB_PASSWORD предусматривает внешнее определение.
 
 Проверка:
 ```bash
@@ -31,7 +29,11 @@ docker run -d --rm --name mysql -e MYSQL_ROOT_PASSWORD="p@ssw0rd" -e MYSQL_DATAB
 ```bash
 docker ps | grep mysql && netstat -tlpn | grep 3306
 ```
-
+Запускаем контейнер с python-приложением. Значения ENV-переменных DB_HOST, DB_USER, DB_NAME установлены заданием по умолчанию внутри образа контейнера и могут быть изменены (-e DB_HOST="..."). 
+Устанавливаем DB_PASSWORD значением из задания:
+```bash
+docker run --rm --network=host -e DB_PASSWORD="very_strong" tvm2360/my_app:latest
+```
 
 
 
