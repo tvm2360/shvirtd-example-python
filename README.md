@@ -17,10 +17,11 @@ docker build -t tvm2360/my_app:latest -f Dockerfile.python .
 docker pull tvm2360/my_app:latest
 ```
 
+Поскольку python-приложение предусматривает взаимодействие с СУБД MySQL, для проверки работоспособности будем использовать
+образ контейнера MariaDB. 
 
-Поскольку python-приложение предусматривает 
 
-
+docker run -d --rm --network=host -e MYSQL_ROOT_PASSWORD="p@ssw0rd"  -e MYSQL_DATABASE="example" -e MYSQL_USER="app" -e MYSQL_PASSWORD="very_strong" -e MYSQL_ROOT_HOST="%" mariadb:10.6.4-focal
 
 
 
