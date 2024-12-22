@@ -48,7 +48,10 @@ Press CTRL+C to quit
  * Debugger is active!
  * Debugger PIN: 524-090-493
 ```
-
+Проверяем curl http://localhost:5000, в консоле python-приложения:
+```bash
+10.0.2.19 - - [22/Dec/2024 19:16:40] "GET / HTTP/1.1" 200 -
+```
 
 
 
