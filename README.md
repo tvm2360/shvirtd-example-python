@@ -2,6 +2,8 @@
 -
 [Dockerfile.python](Dockerfile.python)
 
+[.dockerignore](.dockerignore)
+
 ENV-переменные DB_HOST, DB_USER, DB_NAME заданы внутри со значениями по-умолчанию. DB_PASSWORD предусматривает внешнее определение.
 
 Проверка:
