@@ -18,7 +18,6 @@ docker build -t tvm2360/my_app:latest -f Dockerfile.python .
 ```bash
 docker pull tvm2360/my_app:latest
 ```
-
 Поскольку python-приложение предусматривает взаимодействие с СУБД MySQL, для проверки работоспособности будем использовать
 образ контейнера MariaDB. Загружаем образ:
 ```bash
@@ -30,7 +29,7 @@ docker run -d --rm --name mysql -e MYSQL_ROOT_PASSWORD="p@ssw0rd" -e MYSQL_DATAB
 ```
 Проверяем успешность запуска контейнера:
 ```bash
-docker ps | grep mysql && netstat -tlpn | grep "3306"
+docker ps | grep mysql && netstat -tlpn | grep 3306
 ```
 
 
