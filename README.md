@@ -112,3 +112,9 @@ if __name__ == '__main__':
 [Отчет о результатах сканирования](vulnerabilities.csv)
 # Задание 3
 [compose.yaml](compose.yaml)
+```cmd
+curl -L http://127.0.0.1:8090
+TIME: 2024-12-22 21:44:12, IP: 127.0.0.1
+```
+
+
