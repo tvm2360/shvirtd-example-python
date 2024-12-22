@@ -30,7 +30,7 @@ docker run -d --rm --name mysql -e MYSQL_ROOT_PASSWORD="p@ssw0rd" -e MYSQL_DATAB
 docker ps | grep mysql && netstat -tlpn | grep 3306
 ```
 Запускаем контейнер с python-приложением. Значения ENV-переменных DB_HOST, DB_USER, DB_NAME установлены заданием по умолчанию внутри образа контейнера и могут быть изменены (-e DB_HOST="..."). 
-Устанавливаем DB_PASSWORD значением из задания:
+Присваиваем значение из задания для DB_PASSWORD и передаем ее в контейнер:
 ```bash
 docker run --rm --network=host -e DB_PASSWORD="very_strong" tvm2360/my_app:latest
 ```
