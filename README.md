@@ -111,4 +111,4 @@ if __name__ == '__main__':
 # Задание 2
 [Отчет о результатах сканирования](vulnerabilities.csv)
 # Задание 3
-
+[compose.yaml](compose.yaml)
