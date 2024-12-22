@@ -12,7 +12,13 @@ docker build --check -f Dockerfile.python .
 ```bash
 docker build -t tvm2360/my_app:latest -f Dockerfile.python .
 ```
+Образ доступен для скачивания:
+```bash
+docker pull tvm2360/my_app:latest
+```
 
+
+Поскольку python-приложение предусматривает 
 
 
 
