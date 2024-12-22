@@ -42,7 +42,7 @@ docker ps | grep mysql && netstat -tlpn | grep 3306
 docker run --rm --network=host -e DB_PASSWORD="very_strong" tvm2360/my_app:latest
 ```
 Получаем похожее сообщение:
-```bash
+```cmd
  127.0.0.1 app very_strong example
  * Serving Flask app 'main'
  * Debug mode: on
@@ -56,11 +56,11 @@ Press CTRL+C to quit
  * Debugger PIN: 524-090-493
 ```
 Проверяем curl http://localhost:5000, в консоле python-приложения:
-```bash
+```cmd
 10.0.2.19 - - [22/Dec/2024 19:16:40] "GET / HTTP/1.1" 200 -
 ```
 Для управления названием используемой таблицы через ENV переменную (DB_TABLE), main.py:
-```bash
+```python
 from flask import Flask
 from flask import request
 import os
