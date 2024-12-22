@@ -1,4 +1,4 @@
-Задание 1
+№Задание 1
 -
 [Dockerfile.python](Dockerfile.python) [.dockerignore](.dockerignore)
 
@@ -53,7 +53,7 @@ Press CTRL+C to quit
 ```bash
 10.0.2.19 - - [22/Dec/2024 19:16:40] "GET / HTTP/1.1" 200 -
 ```
-Для управления названием используемой таблицы через ENV переменную, main.py:
+Для управления названием используемой таблицы через ENV переменную (DB_TABLE), main.py:
 ```bash
 from flask import Flask
 from flask import request
@@ -100,6 +100,8 @@ def index():
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
 ```
+№Задание 2
+-
 
 
 
