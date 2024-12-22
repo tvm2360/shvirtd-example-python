@@ -1,3 +1,7 @@
+Задание 1
+-
+
+
 # shvirtd-example-python
 
 Example Flask-application for docker compose training.
