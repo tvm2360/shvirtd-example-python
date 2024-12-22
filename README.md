@@ -22,11 +22,14 @@ docker pull tvm2360/my_app:latest
 ```bash
 docker pull mariadb:10.6.4-focal
 ```
-Запускаем контейнер с установкой значений ENV-переменных MYSQL_DATABASE, MYSQL_USER, MYSQL_PASSWORD из задания, MYSQL_ROOT_PASSWORD - по собственному усмотрению:
+Запускаем контейнер с присвоением ENV-переменных MYSQL_DATABASE, MYSQL_USER, MYSQL_PASSWORD значениями из задания, MYSQL_ROOT_PASSWORD значением по собственному усмотрению:
 ```bash
-docker run -d --rm --network=host -e MYSQL_ROOT_PASSWORD="p@ssw0rd"  -e MYSQL_DATABASE="example" -e MYSQL_USER="app" -e MYSQL_PASSWORD="very_strong" -e MYSQL_ROOT_HOST="%" mariadb:10.6.4-focal
+docker run -d --rm --network=host --name mysql -e MYSQL_ROOT_PASSWORD="SuPeRsEcReT"  -e MYSQL_DATABASE="example" -e MYSQL_USER="app" -e MYSQL_PASSWORD="very_strong" -e MYSQL_ROOT_HOST="%" mariadb:10.6.4-focal
 ```
-
+Проверяем успешность запуска контейнера:
+```bash
+docker ps | grep mysql
+netstat -tlpn | grep "3306"
 
 
 # shvirtd-example-python
