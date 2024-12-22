@@ -2,6 +2,16 @@
 -
 [Dockerfile.python](Dockerfile.python)
 
+ENV-переменные DB_HOST, DB_USER, DB_NAME заданы внутри по умолчанию, DB_PASSWORD предусматривает внешнее определение.
+
+Проверка:
+```bash
+docker build --check -t tvm2360/my_app:latest -f Dockerfile.python . 
+```
+
+
+
+
 # shvirtd-example-python
 
 Example Flask-application for docker compose training.
