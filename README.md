@@ -1,7 +1,6 @@
 Задание 1
 -
-Dockerfile.python
-
+[Dockerfile.python](Dockerfile.python)
 
 # shvirtd-example-python
 
