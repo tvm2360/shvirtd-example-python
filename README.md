@@ -34,6 +34,20 @@ docker ps | grep mysql && netstat -tlpn | grep 3306
 ```bash
 docker run --rm --network=host -e DB_PASSWORD="very_strong" tvm2360/my_app:latest
 ```
+Получаем похожее сообщение:
+```bash
+ 127.0.0.1 app very_strong example
+ * Serving Flask app 'main'
+ * Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.2.19:5000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 524-090-493
+```
 
 
 
