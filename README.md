@@ -6,8 +6,14 @@ ENV-переменные DB_HOST, DB_USER, DB_NAME заданы внутри п�
 
 Проверка:
 ```bash
-docker build --check -t tvm2360/my_app:latest -f Dockerfile.python . 
+docker build --check -f Dockerfile.python . 
 ```
+Создание образа контейнера:
+```bash
+docker build -t tvm2360/my_app:latest -f Dockerfile.python .
+```
+
+
 
 
 
