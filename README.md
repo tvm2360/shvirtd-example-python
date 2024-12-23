@@ -109,8 +109,10 @@ if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0')
 ```
 # Задание 2
-Отчет о результатах сканирования
+Результататы сканирования:
 ![Задача 2](https://github.com/user-attachments/assets/ea970fc8-aca8-43c6-813b-49f45e02623d)
+Отчет о результатах сканированияЖ
+[Задача 2.csv](https://github.com/user-attachments/files/18233972/2.csv)
 
 # Задание 3
 [compose.yaml](compose.yaml)
@@ -123,6 +125,15 @@ TIME: 2024-12-22 21:44:12, IP: 127.0.0.1
 # Задание 4
 ![Задача 4](https://github.com/user-attachments/assets/054572dc-f39f-4090-8965-43b9001adb52)
 [get_app.sh](get_app.sh)
+# Задание 5
+
+# Задание 6
+![Задача 6 dive](https://github.com/user-attachments/assets/3ba08b62-dcb3-428e-8959-ed3460c3536b)
+![Задача 6 docker save](https://github.com/user-attachments/assets/7a31edf8-bbe9-41f3-964a-3b02496ef93e)
+
+# Задание 6.1
+![Задача 6 1](https://github.com/user-attachments/assets/3f9e7426-1592-4f89-b5f3-9fb095bc15f4)
+
 
 
 
