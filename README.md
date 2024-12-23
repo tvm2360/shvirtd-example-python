@@ -110,7 +110,7 @@ if __name__ == '__main__':
 ```
 # Задание 2
 Отчет о результатах сканирования
-
+![Задача 2](https://github.com/user-attachments/assets/ea970fc8-aca8-43c6-813b-49f45e02623d)
 
 # Задание 3
 [compose.yaml](compose.yaml)
