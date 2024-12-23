@@ -118,7 +118,8 @@ if __name__ == '__main__':
 curl -L http://127.0.0.1:8090
 TIME: 2024-12-22 21:44:12, IP: 127.0.0.1
 ```
-SQL results
+![Задача 3](https://github.com/user-attachments/assets/48fff586-cb94-436a-a98a-5f8430699ed7)
+
 # Задание 4
 SQL results, [get_app.sh](get_app.sh), git fork url
 
