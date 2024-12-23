@@ -121,7 +121,9 @@ TIME: 2024-12-22 21:44:12, IP: 127.0.0.1
 ![Задача 3](https://github.com/user-attachments/assets/48fff586-cb94-436a-a98a-5f8430699ed7)
 
 # Задание 4
-SQL results, [get_app.sh](get_app.sh), git fork url
+![Задача 4](https://github.com/user-attachments/assets/054572dc-f39f-4090-8965-43b9001adb52)
+[get_app.sh](get_app.sh)
+
 
 
 
