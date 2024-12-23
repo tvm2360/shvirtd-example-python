@@ -111,8 +111,9 @@ if __name__ == '__main__':
 # Задание 2
 Результататы сканирования:
 ![Задача 2](https://github.com/user-attachments/assets/ea970fc8-aca8-43c6-813b-49f45e02623d)
-Отчет о результатах сканированияЖ
-[Задача 2.csv](https://github.com/user-attachments/files/18233972/2.csv)
+Отчет о результатах сканирования:
+
+[vulnerabilities.csv](https://github.com/user-attachments/files/18233978/vulnerabilities.csv)
 
 # Задание 3
 [compose.yaml](compose.yaml)
