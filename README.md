@@ -119,5 +119,6 @@ TIME: 2024-12-22 21:44:12, IP: 127.0.0.1
 SQL results
 # Задание 4
 SQL results, [get_app.sh](get_app.sh), git fork url
+![image](https://github.com/user-attachments/assets/9749f55c-e81c-46e2-8cc0-6eaa950812ae)
 
 
