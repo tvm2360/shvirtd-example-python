@@ -127,7 +127,9 @@ TIME: 2024-12-22 21:44:12, IP: 127.0.0.1
 ![Задача 4](https://github.com/user-attachments/assets/054572dc-f39f-4090-8965-43b9001adb52)
 [get_app.sh](get_app.sh)
 # Задание 5
-Архивация БД вручную. 
+Архивация БД вручную.
+-
+
 Скрипт запуска контейнера:
 
 [backup_manual.sh](backup_manual.sh)
@@ -143,7 +145,10 @@ mysqldump --opt -h db -u $MYSQL_USER -p$MYSQL_PASSWORD "--result-file=/backup/DB
 
 ![Задача 5](https://github.com/user-attachments/assets/c8924a53-ee85-4744-af0a-4cf5ebd0fab3)
 
-Архивация БД по расписанию 
+Архивация БД по расписанию.
+-
+
+Расписание 
 [crontab](crontab): 
 
 ```cmd
@@ -168,6 +173,10 @@ chmod +x ./backup.sh
 /usr/bin/docker run -d -v /opt/backup:/backup:rw -v ./crontab:/var/spool/cron/crontabs/root:ro -v ./backup.sh:/usr/local/bin/backup.sh:ro \
 --link="db:db" --network=shvirtd-example-python_backend --env-file .env_opt --rm -it schnitzler/mysqldump /bin/bash
 ```
+Результат:
+
+![Задание 5 cron](https://github.com/user-attachments/assets/ad474900-ea15-41a5-b63f-ad7710bde85a)
+
 
 # Задание 6
 ![Задача 6 dive](https://github.com/user-attachments/assets/3ba08b62-dcb3-428e-8959-ed3460c3536b)
