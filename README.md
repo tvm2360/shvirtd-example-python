@@ -153,7 +153,7 @@ mysqldump --opt -h db -u $MYSQL_USER -p$MYSQL_PASSWORD "--result-file=/backup/DB
 ```cmd
 */1       *       *       *       *       sh /usr/local/bin/backup.sh
 ```
-Скрипт для запуска в контейнере:
+Скрипт для запуска в контейнере
 [baskup.sh](baskup.sh):
 
 ```cmd
@@ -161,9 +161,8 @@ mysqldump --opt -h db -u $MYSQL_USER -p$MYSQL_PASSWORD "--result-file=/backup/DB
 now=$(date +"%s_%Y-%m-%d")
 /usr/bin/mysqldump --opt -h db -u ${MYSQL_USER} -p${MYSQL_PASSWORD} "--result-file=/backup/${now}_${MYSQL_DATABASE}.sql" ${MYSQL_DATABASE} 
 ```
-Скрипт запуска контейнера:
-
-[backup_cron.sh](backup_cron.sh)
+Скрипт запуска контейнера
+[backup_cron.sh](backup_cron.sh):
 ```cmd
 #!/bin/bash
 sed "s/\"//g" .env > .env_opt
