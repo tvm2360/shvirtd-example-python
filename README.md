@@ -131,7 +131,6 @@ TIME: 2024-12-22 21:44:12, IP: 127.0.0.1
 -
 
 Скрипт запуска контейнера:
-
 [backup_manual.sh](backup_manual.sh)
 ```cmd
 #!/bin/bash
