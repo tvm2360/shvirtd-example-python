@@ -128,7 +128,7 @@ TIME: 2024-12-22 21:44:12, IP: 127.0.0.1
 [get_app.sh](get_app.sh)
 # Задание 5
 Архивация БД вручную. 
-Скрипт:
+Скрипт запуска контейнера:
 
 [backup_manual.sh](backup_manual.sh)
 ```cmd
@@ -143,7 +143,7 @@ mysqldump --opt -h db -u $MYSQL_USER -p$MYSQL_PASSWORD "--result-file=/backup/DB
 
 ![Задача 5](https://github.com/user-attachments/assets/c8924a53-ee85-4744-af0a-4cf5ebd0fab3)
 
-Архивация БД по расписанию. 
+Архивация БД по расписанию 
 [crontab](crontab): 
 
 ```cmd
@@ -156,6 +156,17 @@ mysqldump --opt -h db -u $MYSQL_USER -p$MYSQL_PASSWORD "--result-file=/backup/DB
 #!/bin/sh
 now=$(date +"%s_%Y-%m-%d")
 /usr/bin/mysqldump --opt -h db -u ${MYSQL_USER} -p${MYSQL_PASSWORD} "--result-file=/backup/${now}_${MYSQL_DATABASE}.sql" ${MYSQL_DATABASE} 
+```
+Скрипт запуска контейнера:
+
+[backup_cron.sh](backup_cron.sh)
+```cmd
+#!/bin/bash
+sed "s/\"//g" .env > .env_opt
+pref=$(/usr/bin/date +"%s_%Y-%m-%d")
+chmod +x ./backup.sh
+/usr/bin/docker run -d -v /opt/backup:/backup:rw -v ./crontab:/var/spool/cron/crontabs/root:ro -v ./backup.sh:/usr/local/bin/backup.sh:ro \
+--link="db:db" --network=shvirtd-example-python_backend --env-file .env_opt --rm -it schnitzler/mysqldump /bin/bash
 ```
 
 # Задание 6
