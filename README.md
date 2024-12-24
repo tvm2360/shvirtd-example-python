@@ -144,13 +144,13 @@ mysqldump --opt -h db -u $MYSQL_USER -p$MYSQL_PASSWORD "--result-file=/backup/DB
 ![Задача 5](https://github.com/user-attachments/assets/c8924a53-ee85-4744-af0a-4cf5ebd0fab3)
 
 Архивация БД по расписанию. 
-crontab:[crontab](crontab) 
+[crontab](crontab): 
 
 ```cmd
 */1       *       *       *       *       sh /usr/local/bin/backup.sh
 ```
 Скрипт для запуска в контейнере:
-baskup.sh:[baskup.sh](baskup.sh)
+[baskup.sh](baskup.sh):
 
 ```cmd
 #!/bin/sh
