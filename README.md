@@ -127,6 +127,20 @@ TIME: 2024-12-22 21:44:12, IP: 127.0.0.1
 ![Задача 4](https://github.com/user-attachments/assets/054572dc-f39f-4090-8965-43b9001adb52)
 [get_app.sh](get_app.sh)
 # Задание 5
+Архивация БД вручную. Скрипт:
+
+[backup_manual.sh](backup_manual.sh)
+```cmd
+#!/bin/bash
+
+source .env
+pref=$(date +"%s_%Y-%m-%d")
+docker run --entrypoint "" -v /opt/backup:/backup --link="db:db" --network=shvirtd-example-python_backend --rm -it schnitzler/mysqldump \
+mysqldump --opt -h db -u $MYSQL_USER -p$MYSQL_PASSWORD "--result-file=/backup/DB_dump_$pref.sql" $MYSQL_DATABASE
+```
+Результат:
+![Задача 5](https://github.com/user-attachments/assets/c8924a53-ee85-4744-af0a-4cf5ebd0fab3)
+
 
 # Задание 6
 ![Задача 6 dive](https://github.com/user-attachments/assets/3ba08b62-dcb3-428e-8959-ed3460c3536b)
