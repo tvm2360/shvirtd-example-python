@@ -61,6 +61,9 @@ Press CTRL+C to quit
 ```cmd
 10.0.2.19 - - [22/Dec/2024 19:16:40] "GET / HTTP/1.1" 200 -
 ```
+
+![Задача 1](https://github.com/user-attachments/assets/a4339bcc-e887-4a53-82ad-e2ff7ec30ce8)
+
 Для управления названием используемой таблицы через ENV переменную (DB_TABLE), main.py:
 ```python
 from flask import Flask
