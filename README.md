@@ -231,7 +231,7 @@ mysqldump --opt -h db -u $MYSQL_USER -p$MYSQL_PASSWORD "--result-file=/backup/DB
 */1       *       *       *       *       sh /usr/local/bin/backup.sh
 ```
 Скрипт для запуска в контейнере
-[baskup.sh](baskup.sh):
+[baсkup.sh](baсkup.sh):
 
 ```cmd
 #!/bin/sh
